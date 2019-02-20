@@ -1,0 +1,1 @@
+wares = {:shoes => 60, :shirt => 50, :pants => 100, :hat}
