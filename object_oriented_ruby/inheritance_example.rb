@@ -1,5 +1,5 @@
 class Vehicle
-    def initialize
+  def initialize
     @speed = 0
     @direction = 'north'
   end
