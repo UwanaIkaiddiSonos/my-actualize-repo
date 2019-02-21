@@ -29,6 +29,18 @@ class Item
 
 end
 
+class Food < Item
+
+  def initialize(input_options)
+    @expiration = input_options[:expiration]
+  end
+
+  def shelf_life
+    @expiration = "yes"
+    puts "Item is expired"
+  end
+end
+
 item1 = Item.new(
 {
   :type => "shoes",
@@ -37,4 +49,14 @@ item1 = Item.new(
   :brand => "Alfani",
 })
 
+food1 = Food.new(
+{
+  :type => "shoes",
+  :color => "black",
+  :price => 55,
+  :brand => "Alfani",
+  :expiration => "no",
+})
+
 p item1.print_info
+p food1.print_info
