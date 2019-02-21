@@ -20,8 +20,8 @@ end
 
 employee1 = Employee.new({first_name: "Majora", last_name: "Carter", salary: 80000, active: true})
 employee2 = Employee.new(first_name: "Danilo", last_name: "Campos", salary: 70000, active: true)
-employee1.print_info
-employee2.print_info
+# employee1.print_info
+# employee2.print_info
 
 class Manager < Employee
   def initialize(input_options)
@@ -36,16 +36,28 @@ class Manager < Employee
   end
 
   def gives_all_raises
+    #get all employees
     #loop through employees
+    @employees.each do |employee|
+      employee.give_annual_raise
+    end
     #call give_annual_raise method
     #apply only to employee salary
   end
 
   def fire_all_employees
-    
+    @employees.each do |employee|
+      employee.active = false
+    end
   end
 end
 
 manager = Manager.new(first_name: "Saron", last_name: "Yitbarek", salary: 100000, active: true, employees: [employee1, employee2])
-manager.print_info
-manager.send_report
+
+# manager.print_info
+# manager.send_report
+# p manager
+# p manager.gives_all_raises
+p employee1
+p employee2
+p manager.fire_all_employees
