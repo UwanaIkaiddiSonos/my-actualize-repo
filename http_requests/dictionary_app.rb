@@ -1,5 +1,5 @@
 require 'http'
-key = "64e90a58d89a8e7f3f000001fe809d0cd55d32cb45b9f117e"
+key = ""
 puts "Enter a word:"
 user_word = gets.chomp
 
